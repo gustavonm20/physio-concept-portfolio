@@ -1,0 +1,47 @@
+/* ===== Design tokens ===== */
+:root {
+  /* Paleta */
+  --bg: #0b1220;
+  --bg-raised: #111a2e;
+  --tq: #2dd4bf; /* verde-água */
+  --bl: #38bdf8; /* azul */
+  --vi: #a78bfa; /* violeta de apoio */
+  --ink: #e2e8f0;
+  --ink-strong: #f8fafc;
+  --mu: #94a3b8;
+  --on-tq: #04342c; /* texto sobre verde-água */
+  --danger: #f09595;
+  --star: #fac775;
+  --wa: #16a34a; /* verde do WhatsApp escurecido para contraste 3:1 com o ícone branco */
+
+  /* Glassmorphism */
+  --gl: rgba(255, 255, 255, 0.04);
+  --gb: rgba(255, 255, 255, 0.1);
+
+  /* Tipografia (variáveis injetadas pelo next/font no <html>) */
+  --font-display: var(--font-barlow-condensed), "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: var(--font-inter), Inter, system-ui, sans-serif;
+
+  /*
+   * Escala tipográfica fluida: cresce com a largura da tela entre um mínimo
+   * (celular de 320px) e um máximo (monitor). Em rem, respeita o tamanho de
+   * fonte configurado no navegador.
+   */
+  --fs-xs: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem); /* 13 → 14px: tags, rodapé, erros */
+  --fs-sm: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem); /* 15 → 16px: botões, links, chips */
+  --fs-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem); /* 16 → 18px: texto corrido */
+  --fs-lead: clamp(1.125rem, 1.04rem + 0.45vw, 1.375rem); /* 18 → 22px: destaque do hero */
+  --fs-h4: clamp(1.375rem, 1.25rem + 0.5vw, 1.625rem); /* 22 → 26px: títulos dos cards */
+  --fs-h3: clamp(1.5rem, 1.3rem + 0.9vw, 2rem); /* 24 → 32px: subtítulos */
+  --fs-h2: clamp(2.25rem, 1.6rem + 3vw, 4rem); /* 36 → 64px: títulos de seção */
+  --fs-h1: clamp(2.75rem, 1.6rem + 5vw, 6rem); /* 44 → 96px: título do hero */
+  --fs-brand: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem); /* 20 → 24px: marca na navbar */
+  --fs-marquee: clamp(1.625rem, 1.4rem + 1vw, 2.25rem); /* 26 → 36px: faixa animada */
+
+  /* Layout e movimento */
+  --max-w: 1180px;
+  --radius: 16px;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1); /* expo-out: arranca rápido e assenta suave */
+  --nav-offset: 80px;
+}
